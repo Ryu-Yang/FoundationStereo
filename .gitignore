@@ -6,3 +6,4 @@ __pycache__
 DATA/*
 *.egg-info/
 test_outputs/
+build/*
