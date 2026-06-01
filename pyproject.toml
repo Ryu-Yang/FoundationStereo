@@ -17,7 +17,7 @@ dependencies = [
     "opencv-contrib-python",
     "imgaug",
     "ninja",
-    "timm",
+    "timm>=0.6",
     "albumentations",
     "jupyterlab",
     "scipy",
@@ -35,6 +35,9 @@ dependencies = [
     "xformers==0.0.28.post1",
     "huggingface-hub",
 ]
+
+[tool.setuptools]
+py-modules = ["Utils"]
 
 [tool.setuptools.packages.find]
 where = ["."]

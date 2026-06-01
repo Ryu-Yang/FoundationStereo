@@ -15,8 +15,6 @@ import logging
 import cv2
 import numpy as np
 import open3d as o3d
-code_dir = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(f'{code_dir}/../')
 from omegaconf import OmegaConf
 from foundation_stereo.core.utils.utils import InputPadder
 from Utils import set_logging_format, set_seed, vis_disparity, depth2xyzmap, toOpen3dCloud
@@ -24,13 +22,13 @@ from foundation_stereo.core.foundation_stereo import FoundationStereo
 
 
 if __name__=="__main__":
-  code_dir = os.path.dirname(os.path.realpath(__file__))
+  # code_dir = os.path.dirname(os.path.realpath(__file__))
   parser = argparse.ArgumentParser()
-  parser.add_argument('--left_file', default=f'{code_dir}/../assets/left.png', type=str)
-  parser.add_argument('--right_file', default=f'{code_dir}/../assets/right.png', type=str)
-  parser.add_argument('--intrinsic_file', default=f'{code_dir}/../assets/K.txt', type=str, help='camera intrinsic matrix and baseline file')
-  parser.add_argument('--ckpt_dir', default=f'{code_dir}/../pretrained_models/23-51-11/model_best_bp2.pth', type=str, help='pretrained model path')
-  parser.add_argument('--out_dir', default=f'{code_dir}/../output/', type=str, help='the directory to save results')
+  parser.add_argument('--left_file', default=f'./assets/left.png', type=str)
+  parser.add_argument('--right_file', default=f'./assets/right.png', type=str)
+  parser.add_argument('--intrinsic_file', default=f'./assets/K.txt', type=str, help='camera intrinsic matrix and baseline file')
+  parser.add_argument('--ckpt_dir', default=f'./pretrained_models/23-51-11/model_best_bp2.pth', type=str, help='pretrained model path')
+  parser.add_argument('--out_dir', default=f'./output/', type=str, help='the directory to save results')
   parser.add_argument('--scale', default=1, type=float, help='downsize the image by scale, must be <=1')
   parser.add_argument('--hiera', default=0, type=int, help='hierarchical inference (only needed for high-resolution images (>1K))')
   parser.add_argument('--z_far', default=10, type=float, help='max depth to clip in point cloud')
