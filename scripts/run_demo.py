@@ -20,7 +20,7 @@ sys.path.append(f'{code_dir}/../')
 from omegaconf import OmegaConf
 from core.utils.utils import InputPadder
 from Utils import set_logging_format, set_seed, vis_disparity, depth2xyzmap, toOpen3dCloud
-from core.foundation_stereo import FoundationStereo
+from foundation_stereo.core.foundation_stereo import FoundationStereo
 
 
 if __name__=="__main__":

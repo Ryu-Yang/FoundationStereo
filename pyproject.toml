@@ -1,0 +1,41 @@
+[build-system]
+requires = ["uv>=0.1.0", "setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foundation-stereo"
+version = "0.0.1"
+description = "FoundationStereo depth estimation"
+readme = "readme.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch==2.4.1",
+    "torchvision==0.19.1",
+    "torchaudio==2.4.1",
+    "scikit-image",
+    "omegaconf",
+    "opencv-contrib-python",
+    "imgaug",
+    "ninja",
+    "timm",
+    "albumentations",
+    "jupyterlab",
+    "scipy",
+    "joblib",
+    "scikit-learn",
+    "ruamel.yaml",
+    "trimesh",
+    "pyyaml",
+    "imageio",
+    "open3d",
+    "transformations",
+    "einops",
+    "gdown",
+    "nodejs",
+    "xformers==0.0.28.post1",
+    "huggingface-hub",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "depth_anything*", "dinov2*"]
