@@ -38,4 +38,4 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["foundation_staereo*", "depth_anything*", "dinov2*"]
+include = ["foundation_stereo*", "depth_anything*", "dinov2*"]

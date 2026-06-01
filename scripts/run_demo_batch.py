@@ -25,7 +25,7 @@ import random
 code_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(f'{code_dir}/../')
 
-from core.utils.utils import InputPadder
+from foundation_stereo.core.utils.utils import InputPadder
 from foundation_stereo.core.foundation_stereo import FoundationStereo
 
 logging.basicConfig(level=logging.INFO, format='[%(filename)s:%(funcName)s()] %(message)s', datefmt='%m-%d|%H:%M:%S')

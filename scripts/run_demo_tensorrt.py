@@ -28,7 +28,7 @@ sys.path.append(f'{code_dir}/../')
 
 from Utils import vis_disparity, depth2xyzmap, toOpen3dCloud, set_seed
 from foundation_stereo.core.foundation_stereo import FoundationStereo
-from core.utils.utils import InputPadder
+from foundation_stereo.core.utils.utils import InputPadder
 
 def preprocess(image_path, args):
     input_image = imageio.imread(image_path)
